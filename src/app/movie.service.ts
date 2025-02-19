@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ export class MovieService {
   constructor() { }
 
   movieList = [
-    {  title: 'The Shawshank Redemption', year: "1994", director: 'Frank Darabont' },
-    {  title: 'The Godfather', year: "1972", director: 'Francis Ford Coppola' },
-    {  title: 'The Godfather: Part II', year: "1974", director: 'Francis Ford Coppola' },
-    {  title: 'The Dark Knight', year: "2008", director: 'Christopher Nolan' },
+    new Movie('The Shawshank Redemption',"1994", 'Frank Darabont' ),
+    new Movie('The Godfather', "1972", 'Francis Ford Coppola' ),
+    new Movie('The Godfather: Part II',"1974",'Francis Ford Coppola' ),
+    new Movie('The Dark Knight', "2008", 'Christopher Nolan' )
   ];
 
   getMovies() {
